@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import '../../styles/club/clubs.css';
 
 const clubs = [
   {
-    id: 1,
+    id: 'codecraft',
     name: 'CodeCraft Club',
     category: 'Development',
     emoji: '💻',
@@ -13,7 +14,7 @@ const clubs = [
     desc: 'Build real-world apps, contribute to open source, and level up your coding skills with peers.',
   },
   {
-    id: 2,
+    id: 'ai-ml',
     name: 'AI & ML Society',
     category: 'Artificial Intelligence',
     emoji: '🤖',
@@ -23,7 +24,7 @@ const clubs = [
     desc: 'Explore machine learning, deep learning, and data science through projects and competitions.',
   },
   {
-    id: 3,
+    id: 'cybersec',
     name: 'CyberSec Guild',
     category: 'Security',
     emoji: '🔐',
@@ -33,7 +34,7 @@ const clubs = [
     desc: 'Ethical hacking, CTF challenges, and cybersecurity awareness — safeguard the digital world.',
   },
   {
-    id: 4,
+    id: 'design-collective',
     name: 'Design Collective',
     category: 'UI/UX Design',
     emoji: '🎨',
@@ -43,7 +44,7 @@ const clubs = [
     desc: 'Craft beautiful user experiences with design thinking, prototyping, and usability testing.',
   },
   {
-    id: 5,
+    id: 'cloud-devops',
     name: 'Cloud & DevOps',
     category: 'Infrastructure',
     emoji: '☁️',
@@ -53,7 +54,7 @@ const clubs = [
     desc: 'Learn cloud platforms, CI/CD pipelines, containerization, and modern deployment practices.',
   },
   {
-    id: 6,
+    id: 'competitive-coding',
     name: 'Competitive Coding',
     category: 'Algorithms',
     emoji: '🏅',
@@ -99,7 +100,7 @@ const Clubs = () => {
         {/* Grid */}
         <div className="clubs-grid">
           {filtered.map((club) => (
-            <div className="club-card" key={club.id}>
+            <Link to={`/club-details/${club.id}`} className="club-card block group" key={club.id}>
 
               {/* Coloured top banner with emoji + member count */}
               <div className="club-icon-wrap" style={{ background: club.bg }}>
@@ -115,13 +116,13 @@ const Clubs = () => {
                 <h3 className="club-name">{club.name}</h3>
                 <p className="club-desc">{club.desc}</p>
                 <div className="club-footer">
-                  <button className="club-join-btn" style={{ background: club.color }}>
-                    Join Club
-                  </button>
+                  <span className="club-join-btn inline-block text-center" style={{ background: club.color }}>
+                    View Details
+                  </span>
                 </div>
               </div>
 
-            </div>
+            </Link>
           ))}
         </div>
 
