@@ -1,0 +1,369 @@
+@reference "tailwindcss";
+
+.cd-page-container {
+  @apply w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8;
+}
+
+/* --- Hero Section --- */
+.cd-hero-section {
+  @apply relative rounded-[2rem] overflow-hidden mb-10 shadow-[0_4px_24px_rgba(0,0,0,0.04)] bg-slate-900 border border-slate-100;
+  min-height: 380px;
+}
+
+.cd-hero-overlay {
+  @apply absolute inset-0 bg-gradient-to-r from-slate-900/90 via-slate-900/60 to-transparent;
+}
+
+.cd-hero-content {
+  @apply relative h-full flex flex-col justify-center p-10 lg:p-16 max-w-3xl min-h-[380px];
+}
+
+.cd-hero-title {
+  @apply text-5xl font-extrabold tracking-tight text-white mb-4;
+}
+
+.cd-hero-subtitle {
+  @apply text-lg text-slate-300 mb-10 leading-relaxed font-light;
+}
+
+/* --- Search & Filters --- */
+.cd-search-container {
+  @apply flex flex-col sm:flex-row gap-4 mt-auto;
+}
+
+.cd-search-wrapper {
+  @apply relative flex-grow max-w-md;
+}
+
+.cd-search-icon-wrapper {
+  @apply absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none;
+}
+
+.cd-search-icon {
+  @apply h-5 w-5 text-slate-400;
+}
+
+.cd-search-input {
+  @apply block w-full pl-11 pr-4 py-2 bg-white/10 border border-white/20 rounded-full text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white/20 transition-all backdrop-blur-md;
+}
+
+.cd-filter-buttons {
+  @apply flex gap-2 overflow-x-auto pb-2 sm:pb-0;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+.cd-filter-buttons::-webkit-scrollbar {
+  display: none;
+}
+
+.cd-btn-primary {
+  @apply px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-full text-sm font-medium transition-colors shadow-lg shadow-blue-600/30 whitespace-nowrap;
+}
+
+.cd-btn-secondary {
+  @apply px-5 py-2.5 bg-white/20 hover:bg-white/30 text-white backdrop-blur-md rounded-full text-sm font-medium transition-colors border border-white/20 shadow-lg whitespace-nowrap;
+}
+
+/* --- Main Grid --- */
+.cd-main-grid {
+  @apply grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16;
+}
+
+/* --- Calendar Section --- */
+.cd-calendar-card {
+  @apply lg:col-span-2 bg-white rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-slate-100 overflow-hidden;
+}
+
+.cd-calendar-inner {
+  @apply p-8;
+}
+
+.cd-calendar-header {
+  @apply flex justify-between items-end mb-8;
+}
+
+.cd-calendar-title {
+  @apply text-2xl font-bold text-slate-900;
+}
+
+.cd-calendar-subtitle {
+  @apply text-sm text-slate-500 mt-1;
+}
+
+.cd-calendar-nav {
+  @apply flex gap-2;
+}
+
+.cd-calendar-nav-btn {
+  @apply p-2 rounded-lg border border-slate-200 hover:bg-slate-50 text-slate-600 transition-colors;
+}
+
+.cd-calendar-nav-icon {
+  @apply w-5 h-5;
+}
+
+.cd-calendar-nav-icon.prev {
+  @apply rotate-180;
+}
+
+.cd-calendar-grid {
+  @apply grid grid-cols-7 gap-px bg-slate-100 rounded-xl overflow-hidden border border-slate-100;
+}
+
+.cd-calendar-day-header {
+  @apply bg-slate-50 text-center py-3 text-xs font-semibold text-slate-500 tracking-wider;
+}
+
+.cd-calendar-cell {
+  @apply bg-white min-h-[100px] p-2 transition-colors hover:bg-slate-50;
+}
+
+.cd-calendar-cell.current-month {
+  @apply text-slate-900;
+}
+
+.cd-calendar-cell.other-month {
+  @apply text-slate-400 bg-slate-50/50;
+}
+
+.cd-calendar-date {
+  @apply inline-flex items-center justify-center w-7 h-7 rounded-full text-sm font-medium mb-1;
+}
+
+.cd-calendar-date.active {
+  @apply bg-blue-600 text-white shadow-sm;
+}
+
+.cd-event-pill {
+  @apply text-[10px] font-bold px-2 py-1 rounded mb-1 truncate cursor-pointer transition-transform hover:scale-[1.02];
+}
+
+.cd-event-pill.blue { @apply bg-blue-100 text-blue-700; }
+.cd-event-pill.cyan { @apply bg-cyan-100 text-cyan-700; }
+.cd-event-pill.dark { @apply bg-slate-800 text-slate-100; }
+.cd-event-pill.indigo { @apply bg-indigo-100 text-indigo-700; }
+.cd-event-pill.orange { @apply bg-orange-100 text-orange-700; }
+
+.cd-event-stack {
+  @apply flex flex-col gap-1;
+}
+
+/* --- Sidebar (Right Column) --- */
+.cd-sidebar {
+  @apply space-y-8;
+}
+
+/* Featured Events Card */
+.cd-featured-card {
+  @apply bg-white rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-slate-100 overflow-hidden flex flex-col;
+}
+
+.cd-featured-header {
+  @apply flex items-center gap-3 p-6 border-b border-slate-50 bg-slate-50/50;
+}
+
+.cd-featured-icon {
+  @apply w-5 h-5 text-blue-600;
+}
+
+.cd-featured-title {
+  @apply font-semibold text-slate-900;
+}
+
+.cd-featured-list {
+  @apply p-6 flex flex-col gap-6;
+}
+
+.cd-featured-item {
+  @apply transition-colors;
+}
+
+.cd-featured-item.bordered {
+  @apply border-b border-slate-100 pb-6;
+}
+
+.cd-featured-item-flex {
+  @apply flex gap-4;
+}
+
+.cd-featured-date-box {
+  @apply flex flex-col items-center justify-center bg-blue-50 rounded-xl px-4 py-3 h-fit border border-blue-100/50;
+}
+
+.cd-featured-date-month {
+  @apply text-xs font-bold text-blue-600 uppercase tracking-wider;
+}
+
+.cd-featured-date-day {
+  @apply text-xl font-black text-slate-900 leading-none mt-1;
+}
+
+.cd-featured-tag {
+  @apply text-[10px] font-black tracking-widest uppercase px-2 py-0.5 rounded mb-2 inline-block;
+}
+
+.cd-featured-tag.cyan { @apply bg-cyan-50 text-cyan-600; }
+.cd-featured-tag.orange { @apply bg-orange-50 text-orange-600; }
+
+.cd-featured-item-title {
+  @apply font-bold text-slate-900 text-lg leading-tight mb-2 transition-colors;
+}
+
+.cd-featured-item:hover .cd-featured-item-title {
+  @apply text-blue-600;
+}
+
+.cd-featured-item-desc {
+  @apply text-sm text-slate-500 leading-relaxed;
+}
+
+.cd-featured-details {
+  @apply flex items-center justify-between mt-4 pl-20;
+}
+
+.cd-featured-location {
+  @apply flex items-center gap-1.5 text-xs font-medium text-slate-500;
+}
+
+.cd-featured-location-icon {
+  @apply w-3.5 h-3.5;
+}
+
+.cd-btn-register {
+  @apply text-xs font-bold text-white bg-slate-900 hover:bg-slate-800 px-4 py-2 rounded-lg transition-colors;
+}
+
+.cd-btn-details {
+  @apply text-xs font-bold text-slate-700 bg-slate-100 hover:bg-slate-200 px-4 py-2 rounded-lg transition-colors;
+}
+
+.cd-featured-footer {
+  @apply p-4 border-t border-slate-50 bg-slate-50/50 text-center mt-auto;
+}
+
+.cd-featured-link {
+  @apply text-sm font-semibold text-blue-600 hover:text-blue-800 transition-colors;
+}
+
+/* Newsletter Card */
+.cd-newsletter-card {
+  @apply bg-slate-900 rounded-2xl p-8 relative overflow-hidden shadow-xl;
+}
+
+.cd-newsletter-blob {
+  @apply absolute top-0 right-0 w-32 h-32 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse;
+}
+
+.cd-newsletter-title {
+  @apply text-xl font-bold text-white mb-2 relative z-10;
+}
+
+.cd-newsletter-desc {
+  @apply text-sm text-slate-400 mb-6 leading-relaxed relative z-10;
+}
+
+.cd-newsletter-form {
+  @apply relative z-10 flex gap-2;
+}
+
+.cd-newsletter-input {
+  @apply w-full bg-white/10 border border-white/20 rounded-xl px-4 py-2.5 text-sm text-white placeholder-slate-400 focus:outline-none focus:border-blue-500 transition-colors;
+}
+
+.cd-newsletter-submit {
+  @apply px-4 py-2.5 bg-blue-600 hover:bg-blue-500 text-white rounded-xl text-sm font-semibold transition-colors shadow-lg shadow-blue-500/20 whitespace-nowrap;
+}
+
+/* --- Event Archive Section --- */
+.cd-archive-section {
+  @apply mt-10;
+}
+
+.cd-archive-header {
+  @apply flex justify-between items-end mb-8;
+}
+
+.cd-archive-title {
+  @apply text-3xl font-extrabold text-slate-900;
+}
+
+.cd-archive-desc {
+  @apply text-slate-500 text-lg mt-1;
+}
+
+.cd-archive-link {
+  @apply hidden sm:flex items-center gap-1 text-blue-600 font-semibold hover:text-blue-800 transition-colors;
+}
+
+.cd-archive-link-icon {
+  @apply w-4 h-4;
+}
+
+.cd-archive-grid {
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6;
+}
+
+.cd-archive-card {
+  @apply bg-white rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-slate-100 overflow-hidden flex flex-col hover:-translate-y-1 transition-transform duration-300;
+}
+
+.cd-archive-img-wrapper {
+  @apply relative h-40 overflow-hidden;
+}
+
+.cd-archive-img {
+  @apply w-full h-full object-cover transition-transform duration-500;
+}
+
+.cd-archive-card:hover .cd-archive-img {
+  @apply scale-105;
+}
+
+.cd-archive-badge {
+  @apply absolute top-3 right-3 text-[10px] font-black tracking-widest uppercase px-2 py-1 rounded shadow-sm backdrop-blur-md;
+}
+
+.cd-archive-badge.blue { @apply bg-white/90 text-blue-700; }
+.cd-archive-badge.cyan { @apply bg-white/90 text-cyan-700; }
+.cd-archive-badge.orange { @apply bg-white/90 text-orange-700; }
+.cd-archive-badge.indigo { @apply bg-white/90 text-indigo-700; }
+
+.cd-archive-content {
+  @apply p-5 flex flex-col flex-grow;
+}
+
+.cd-archive-date {
+  @apply text-xs font-semibold text-slate-400 mb-1 uppercase tracking-wider;
+}
+
+.cd-archive-item-title {
+  @apply text-base font-bold text-slate-900 mb-2 transition-colors leading-tight;
+}
+
+.cd-archive-card:hover .cd-archive-item-title {
+  @apply text-blue-600;
+}
+
+.cd-archive-item-desc {
+  @apply text-sm text-slate-500 leading-relaxed mb-5 flex-grow;
+}
+
+.cd-archive-actions {
+  @apply flex gap-2 mt-auto;
+}
+
+.cd-archive-btn-primary {
+  @apply flex-grow flex items-center justify-center gap-2 bg-slate-50 hover:bg-slate-100 text-slate-700 px-4 py-2.5 rounded-xl text-sm font-semibold transition-colors border border-slate-200;
+}
+
+.cd-archive-btn-secondary {
+  @apply flex-shrink-0 flex items-center justify-center w-10 h-10 bg-slate-50 hover:bg-slate-100 text-slate-600 rounded-xl transition-colors border border-slate-200;
+}
+
+.cd-archive-btn-icon {
+  @apply w-4 h-4;
+}
+
+.cd-archive-mobile-link {
+  @apply mt-6 flex sm:hidden justify-center;
+}

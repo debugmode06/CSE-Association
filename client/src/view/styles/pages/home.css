@@ -1,0 +1,97 @@
+@reference "tailwindcss";
+
+.home-container {
+  @apply w-full flex flex-col items-center;
+}
+
+.home-hero {
+  @apply w-full bg-slate-50 py-20 px-4 text-center border-b border-slate-200;
+}
+
+.home-title {
+  @apply text-5xl md:text-6xl font-extrabold text-slate-900 mb-6;
+}
+
+.home-subtitle {
+  @apply text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-10;
+}
+
+.home-section {
+  @apply w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16;
+}
+
+.section-header-wrapper {
+  @apply flex flex-col md:flex-row justify-between items-end mb-10 gap-4;
+}
+
+.section-header-left {
+  @apply flex flex-col gap-2;
+}
+
+.section-title {
+  @apply text-3xl md:text-4xl font-extrabold text-slate-900;
+}
+
+.section-subtitle {
+  @apply text-slate-500 text-lg;
+}
+
+.view-all-link {
+  @apply flex items-center gap-1 text-blue-600 font-semibold hover:text-blue-800 transition-colors;
+}
+
+.clubs-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8;
+}
+
+.club-card {
+  @apply bg-white rounded-2xl overflow-hidden shadow-[0_4px_24px_rgba(0,0,0,0.06)] border border-slate-100 flex flex-col hover:-translate-y-1 hover:shadow-xl transition-all duration-300;
+}
+
+.club-card-image-wrap {
+  @apply relative h-36 overflow-visible;
+}
+
+.club-card-img-container {
+  @apply w-full h-full overflow-hidden;
+}
+
+.club-card-image {
+  @apply w-full h-full object-cover transition-transform duration-500 opacity-90;
+}
+
+.club-card:hover .club-card-image {
+  @apply scale-105 opacity-100;
+}
+
+.club-card-icon-box {
+  @apply absolute -bottom-4 left-5 bg-white rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.1)] p-2 w-10 h-10 flex items-center justify-center border border-slate-50 z-10;
+}
+
+.club-card-icon {
+  @apply w-5 h-5 text-blue-600;
+}
+
+.club-card-content {
+  @apply p-5 pt-8 flex flex-col flex-grow;
+}
+
+.club-card-badge {
+  @apply self-start bg-blue-50 text-blue-600 text-[9px] font-black tracking-widest uppercase px-2 py-1 rounded mb-2.5;
+}
+
+.club-card-title {
+  @apply text-xl font-bold text-slate-900 mb-2 transition-colors;
+}
+
+.club-card:hover .club-card-title {
+  @apply text-blue-600;
+}
+
+.club-card-desc {
+  @apply text-slate-500 text-sm mb-6 flex-grow leading-relaxed;
+}
+
+.club-card-link {
+  @apply text-sm font-bold text-blue-600 hover:text-blue-800 transition-colors inline-block mt-auto;
+}
