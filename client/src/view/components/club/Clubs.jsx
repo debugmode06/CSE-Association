@@ -4,68 +4,62 @@ import '../../styles/club/clubs.css';
 
 const clubs = [
   {
-    id: 'codecraft',
-    name: 'CodeCraft Club',
-    category: 'Development',
-    emoji: '💻',
-    color: '#3b82f6',
-    bg: '#dbeafe',
-    members: 120,
-    desc: 'Build real-world apps, contribute to open source, and level up your coding skills with peers.',
+    id: 'events-outreach',
+    name: 'Events & Outreach',
+    badge: 'COMMUNITY',
+    image: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=800',
+    desc: 'Organizing flagship events, outreach programs, and mixers that build a strong student community.',
+    linkText: 'View Events',
+    category: 'Community',
   },
   {
-    id: 'ai-ml',
-    name: 'AI & ML Society',
-    category: 'Artificial Intelligence',
-    emoji: '🤖',
-    color: '#7c3aed',
-    bg: '#ede9fe',
-    members: 95,
-    desc: 'Explore machine learning, deep learning, and data science through projects and competitions.',
+    id: 'technical-activities',
+    name: 'Technical Activities',
+    badge: 'TECHNICAL',
+    image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800',
+    desc: 'Hackathons, coding competitions, seminars, and hands-on workshops to sharpen your tech skills.',
+    linkText: 'Explore Activities',
+    category: 'Technical',
   },
   {
-    id: 'cybersec',
-    name: 'CyberSec Guild',
-    category: 'Security',
-    emoji: '🔐',
-    color: '#dc2626',
-    bg: '#fee2e2',
-    members: 70,
-    desc: 'Ethical hacking, CTF challenges, and cybersecurity awareness — safeguard the digital world.',
+    id: 'administration-finance',
+    name: 'Administration & Finance',
+    badge: 'OPERATIONS',
+    image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=800',
+    desc: 'Managing association resources, budgeting, scheduling, and logistical operations.',
+    linkText: 'Learn More',
+    category: 'Operations',
   },
   {
-    id: 'design-collective',
-    name: 'Design Collective',
-    category: 'UI/UX Design',
-    emoji: '🎨',
-    color: '#d97706',
-    bg: '#fef3c7',
-    members: 85,
-    desc: 'Craft beautiful user experiences with design thinking, prototyping, and usability testing.',
+    id: 'media-communications',
+    name: 'Media & Communication',
+    badge: 'MEDIA',
+    image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800',
+    desc: 'Social media presence, content creation, photography, and public relations for the association.',
+    linkText: 'View Gallery',
+    category: 'Media',
   },
   {
-    id: 'cloud-devops',
-    name: 'Cloud & DevOps',
-    category: 'Infrastructure',
-    emoji: '☁️',
-    color: '#059669',
-    bg: '#d1fae5',
-    members: 60,
-    desc: 'Learn cloud platforms, CI/CD pipelines, containerization, and modern deployment practices.',
+    id: 'professional-development',
+    name: 'Professional Development',
+    badge: 'CAREER',
+    image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=800',
+    desc: 'Resume building, interview prep, and industry networking sessions to launch your tech career.',
+    linkText: 'See Opportunities',
+    category: 'Career',
   },
   {
-    id: 'competitive-coding',
-    name: 'Competitive Coding',
-    category: 'Algorithms',
-    emoji: '🏅',
-    color: '#ea580c',
-    bg: '#ffedd5',
-    members: 110,
-    desc: 'Sharpen your problem-solving with DSA, competitive programming contests, and mock interviews.',
+    id: 'entrepreneurship-clubs',
+    name: 'Entrepreneurship & Clubs',
+    badge: 'INNOVATION',
+    image: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=80&w=800',
+    desc: 'Incubating startup ideas, pitch competitions, and learning to build successful products.',
+    linkText: 'Join the Hub',
+    category: 'Innovation',
   },
 ];
 
-const categories = ['All', 'Development', 'Artificial Intelligence', 'Security', 'UI/UX Design', 'Infrastructure', 'Algorithms'];
+const categories = ['All', 'Community', 'Technical', 'Operations', 'Media', 'Career', 'Innovation'];
 
 const Clubs = () => {
   const [active, setActive] = useState('All');
@@ -77,11 +71,13 @@ const Clubs = () => {
 
         {/* Header */}
         <div className="clubs-header">
-          <span className="section-eyebrow">Get Involved</span>
-          <h2 className="clubs-title">Our Clubs</h2>
-          <p className="clubs-subtitle">
-            Find your passion. Join a club, build projects, compete, and connect with like-minded peers.
-          </p>
+          <div className="clubs-header-left">
+            <h2 className="clubs-title">Specialized Communities</h2>
+            <p className="clubs-subtitle">Join a niche that matches your technical passion.</p>
+          </div>
+          <Link to="#" className="clubs-view-all">
+            View All Clubs <span className="clubs-arrow">→</span>
+          </Link>
         </div>
 
         {/* Filters */}
@@ -100,30 +96,23 @@ const Clubs = () => {
         {/* Grid */}
         <div className="clubs-grid">
           {filtered.map((club) => (
-            <Link to={`/club-details/${club.id}`} className="club-card block group" key={club.id}>
+              <Link to={`/club-details/${club.id}`} className="club-card" key={club.id}>
 
-              {/* Coloured top banner with emoji + member count */}
-              <div className="club-icon-wrap" style={{ background: club.bg }}>
-                <span className="club-emoji">{club.emoji}</span>
-                <span className="club-members-badge" style={{ color: club.color, background: 'rgba(0,0,0,0.08)' }}>
-                  {club.members} members
-                </span>
-              </div>
-
-              {/* Body */}
-              <div className="club-body">
-                <span className="club-category" style={{ color: club.color }}>{club.category}</span>
-                <h3 className="club-name">{club.name}</h3>
-                <p className="club-desc">{club.desc}</p>
-                <div className="club-footer">
-                  <span className="club-join-btn inline-block text-center" style={{ background: club.color }}>
-                    View Details
-                  </span>
+                {/* Banner image */}
+                <div className="club-img-wrap">
+                  <img src={club.image} alt={club.name} className="club-img" />
                 </div>
-              </div>
 
-            </Link>
-          ))}
+                {/* Card body */}
+                <div className="club-body">
+                  <span className="club-badge">{club.badge}</span>
+                  <h3 className="club-name">{club.name}</h3>
+                  <p className="club-desc">{club.desc}</p>
+                  <span className="club-link">{club.linkText}</span>
+                </div>
+
+              </Link>
+            ))}
         </div>
 
       </div>

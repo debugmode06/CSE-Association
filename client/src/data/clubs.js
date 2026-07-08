@@ -1,80 +1,15 @@
-import { Code2, Users, Briefcase, Lightbulb, FileText, Megaphone } from 'lucide-react';
+import { PartyPopper, Terminal, Landmark, Camera, Briefcase, Rocket } from 'lucide-react';
 
 export const clubsData = [
   {
-    id: 'technical-activities',
-    title: 'Technical Activities',
-    badge: 'TECHNICAL',
-    description: 'Sync with the latest hackathons, seminars, and networking mixers happening across the department.',
-    linkText: 'Explore Activities',
-    icon: Code2,
-    image: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=800',
-    fullDescription: 'Our Technical Activities club brings together the brightest minds to participate in hackathons, algorithmic challenges, and hands-on coding workshops. Stay ahead of the curve by building robust technical skills.',
-    calendarSummary: 'October 2024',
-    calendarSubtitle: 'Fall Semester Focus',
-    featuredEvents: [
-      {
-        id: 'tech-1',
-        day: '15',
-        month: 'Oct',
-        tag: 'Hackathon',
-        tagColor: 'cyan',
-        title: 'Autumn Hack-A-Thon',
-        desc: 'Building solutions for local sustainability challenges.',
-        time: '48 Hours',
-        location: 'Main Engineering Atrium'
-      },
-      {
-        id: 'tech-2',
-        day: '22',
-        month: 'Oct',
-        tag: 'Workshop',
-        tagColor: 'orange',
-        title: 'Advanced React Patterns',
-        desc: 'Deep dive into modern web development with senior engineers.',
-        time: '04:00 PM - 06:00 PM',
-        location: 'Lab 402'
-      }
-    ],
-    archives: [
-      {
-        id: 'tech-a1',
-        date: 'September 12, 2024',
-        title: 'Summer Code Camp Highlights',
-        desc: 'A recap of the intensive 2-week development camp for freshmen.',
-        badge: 'Recording',
-        badgeColor: 'blue',
-        img: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=800'
-      },
-      {
-        id: 'tech-a2',
-        date: 'March 05, 2024',
-        title: 'Introduction to Web3',
-        desc: 'Guest speakers from Ethereum Foundation explaining smart contracts.',
-        badge: 'Slides',
-        badgeColor: 'cyan',
-        img: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=800'
-      },
-      {
-        id: 'tech-a3',
-        date: 'January 20, 2024',
-        title: 'Winter AI Build-a-thon',
-        desc: 'Gallery from our 48-hour AI application building contest.',
-        badge: 'Gallery',
-        badgeColor: 'orange',
-        img: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800'
-      }
-    ]
-  },
-  {
     id: 'events-outreach',
-    title: 'Events and Outreach',
+    title: 'Events & Outreach',
     badge: 'COMMUNITY',
-    description: 'Organizing flagship events, managing outreach programs, and building a strong student community.',
+    description: 'Organizing flagship events, managing outreach programs, and building a strong student community across the department.',
     linkText: 'View Events',
-    icon: Users,
-    image: 'https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&q=80&w=800',
-    fullDescription: 'The heart of our association. We orchestrate the large-scale mixers, alumni connections, and community outreach events that bind our department together.',
+    icon: PartyPopper,
+    image: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=800',
+    fullDescription: 'The heart of our association. We orchestrate the large-scale mixers, alumni connections, and community outreach events that bind our department together and create lasting memories.',
     calendarSummary: 'November 2024',
     calendarSubtitle: 'Community Month',
     featuredEvents: [
@@ -128,125 +63,82 @@ export const clubsData = [
         badge: 'Photos',
         badgeColor: 'orange',
         img: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=800'
-      },
-      {
-        id: 'outreach-a4',
-        date: 'May 10, 2024',
-        title: 'Spring Charity Drive',
-        desc: 'Our successful fundraising campaign for local STEM education.',
-        badge: 'Slides',
-        badgeColor: 'indigo',
-        img: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80&w=800'
       }
     ]
   },
   {
-    id: 'professional-development',
-    title: 'Professional Development',
-    badge: 'CAREER',
-    description: 'Sharpening skills through resume building, interview prep, and industry networking sessions.',
-    linkText: 'See Opportunities',
-    icon: Briefcase,
-    image: 'https://images.unsplash.com/photo-1552820728-8b83bb6b773f?auto=format&fit=crop&q=80&w=800',
-    fullDescription: 'Your bridge to the industry. We provide the tools, reviews, and connections necessary to land top-tier internships and full-time roles.',
-    calendarSummary: 'October 2024',
-    calendarSubtitle: 'Recruitment Season',
-    featuredEvents: [
-      {
-        id: 'pd-1',
-        day: '18',
-        month: 'Oct',
-        tag: 'Seminar',
-        tagColor: 'cyan',
-        title: 'Big Tech Resume Review',
-        desc: '1-on-1 resume tear-downs with engineers from Google and Microsoft.',
-        time: '01:00 PM - 05:00 PM',
-        location: 'Career Center'
-      }
-    ],
-    archives: [
-      {
-        id: 'pd-a1',
-        date: 'April 10, 2024',
-        title: 'Mock Interview Marathon',
-        desc: 'Students practiced behavioral and technical interviews with alumni.',
-        badge: 'Photos',
-        badgeColor: 'cyan',
-        img: 'https://images.unsplash.com/photo-1552820728-8b83bb6b773f?auto=format&fit=crop&q=80&w=800'
-      },
-      {
-        id: 'pd-a2',
-        date: 'February 15, 2024',
-        title: 'Salary Negotiation 101',
-        desc: 'Learn how to advocate for your worth in your first job.',
-        badge: 'Recording',
-        badgeColor: 'indigo',
-        img: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80&w=800'
-      },
-      {
-        id: 'pd-a3',
-        date: 'November 05, 2023',
-        title: 'LinkedIn Profile Makeover',
-        desc: 'Step-by-step guide to building a recruiter-ready profile.',
-        badge: 'Slides',
-        badgeColor: 'blue',
-        img: 'https://images.unsplash.com/photo-1516116216624-53e697fedbea?auto=format&fit=crop&q=80&w=800'
-      }
-    ]
-  },
-  {
-    id: 'entrepreneurship-club',
-    title: 'Entrepreneurship and Club',
-    badge: 'INNOVATION',
-    description: 'Incubating startup ideas, practicing business strategy, and learning how to build successful products.',
-    linkText: 'Join the Hub',
-    icon: Lightbulb,
+    id: 'technical-activities',
+    title: 'Technical Activities',
+    badge: 'TECHNICAL',
+    description: 'Sync with the latest hackathons, coding competitions, seminars, and hands-on workshops happening across the department.',
+    linkText: 'Explore Activities',
+    icon: Terminal,
     image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800',
-    fullDescription: 'For the builders and visionaries. Transform your side projects into viable startups through pitch competitions, mentorship, and seed funding insights.',
-    calendarSummary: 'December 2024',
-    calendarSubtitle: 'Pitch Quarter',
+    fullDescription: 'Our Technical Activities club brings together the brightest minds to participate in hackathons, algorithmic challenges, and hands-on coding workshops. Stay ahead of the curve by building robust technical skills.',
+    calendarSummary: 'October 2024',
+    calendarSubtitle: 'Fall Semester Focus',
     featuredEvents: [
       {
-        id: 'ent-1',
-        day: '01',
-        month: 'Dec',
-        tag: 'Competition',
+        id: 'tech-1',
+        day: '15',
+        month: 'Oct',
+        tag: 'Hackathon',
         tagColor: 'cyan',
-        title: 'Winter Pitch Fest',
-        desc: 'Pitch your MVP to a panel of local angel investors.',
-        time: '05:00 PM - 08:00 PM',
-        location: 'Innovation Hub'
+        title: 'Autumn Hack-A-Thon',
+        desc: 'Building solutions for local sustainability challenges.',
+        time: '48 Hours',
+        location: 'Main Engineering Atrium'
+      },
+      {
+        id: 'tech-2',
+        day: '22',
+        month: 'Oct',
+        tag: 'Workshop',
+        tagColor: 'orange',
+        title: 'Advanced React Patterns',
+        desc: 'Deep dive into modern web development with senior engineers.',
+        time: '04:00 PM - 06:00 PM',
+        location: 'Lab 402'
       }
     ],
     archives: [
       {
-        id: 'ent-a1',
-        date: 'October 12, 2023',
-        title: 'Fall Pitch Fest',
-        desc: 'Students pitched their MVP to local angel investors.',
+        id: 'tech-a1',
+        date: 'September 12, 2024',
+        title: 'Summer Code Camp Highlights',
+        desc: 'A recap of the intensive 2-week development camp for freshmen.',
         badge: 'Recording',
+        badgeColor: 'blue',
+        img: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=800'
+      },
+      {
+        id: 'tech-a2',
+        date: 'March 05, 2024',
+        title: 'Introduction to Web3',
+        desc: 'Guest speakers from Ethereum Foundation explaining smart contracts.',
+        badge: 'Slides',
+        badgeColor: 'cyan',
+        img: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=800'
+      },
+      {
+        id: 'tech-a3',
+        date: 'January 20, 2024',
+        title: 'Winter AI Build-a-thon',
+        desc: 'Gallery from our 48-hour AI application building contest.',
+        badge: 'Gallery',
         badgeColor: 'orange',
         img: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800'
-      },
-      {
-        id: 'ent-a2',
-        date: 'September 01, 2023',
-        title: 'Startup Ideation Workshop',
-        desc: 'Brainstorming frameworks to discover viable business ideas.',
-        badge: 'Slides',
-        badgeColor: 'cyan',
-        img: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=800'
       }
     ]
   },
   {
-    id: 'administrative-finance',
-    title: 'Administrative & Finance',
+    id: 'administration-finance',
+    title: 'Administration & Finance',
     badge: 'OPERATIONS',
-    description: 'Managing association resources, budgeting, scheduling, and logistical operations.',
+    description: 'Managing association resources, budgeting, scheduling, and all logistical operations that keep the club running smoothly.',
     linkText: 'Learn More',
-    icon: FileText,
-    image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80&w=800',
+    icon: Landmark,
+    image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=800',
     fullDescription: 'The backbone of our association. Learn organizational leadership, budget management, and operational strategy by running a large-scale student organization.',
     calendarSummary: 'Ongoing',
     calendarSubtitle: 'Operations',
@@ -271,7 +163,7 @@ export const clubsData = [
         desc: 'Reviewing the annual financial distribution for the association.',
         badge: 'Slides',
         badgeColor: 'blue',
-        img: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80&w=800'
+        img: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=800'
       },
       {
         id: 'admin-a2',
@@ -286,12 +178,12 @@ export const clubsData = [
   },
   {
     id: 'media-communications',
-    title: 'Media & Communications',
+    title: 'Media & Communication',
     badge: 'MEDIA',
-    description: 'Handling social media presence, content creation, photography, and public relations.',
+    description: 'Handling social media presence, content creation, photography, videography, and public relations for the association.',
     linkText: 'View Gallery',
-    icon: Megaphone,
-    image: 'https://images.unsplash.com/photo-1516116216624-53e697fedbea?auto=format&fit=crop&q=80&w=800',
+    icon: Camera,
+    image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800',
     fullDescription: 'The voice of our community. Develop skills in digital marketing, graphic design, and brand management while documenting our greatest moments.',
     calendarSummary: 'Weekly',
     calendarSubtitle: 'Content Sprints',
@@ -325,7 +217,7 @@ export const clubsData = [
         desc: 'Campus photography tour capturing student life.',
         badge: 'Photos',
         badgeColor: 'orange',
-        img: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=800'
+        img: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800'
       },
       {
         id: 'media-a3',
@@ -335,6 +227,105 @@ export const clubsData = [
         badge: 'Slides',
         badgeColor: 'blue',
         img: 'https://images.unsplash.com/photo-1552820728-8b83bb6b773f?auto=format&fit=crop&q=80&w=800'
+      }
+    ]
+  },
+  {
+    id: 'professional-development',
+    title: 'Professional Development',
+    badge: 'CAREER',
+    description: 'Sharpening skills through resume building, interview prep, industry networking sessions, and career guidance.',
+    linkText: 'See Opportunities',
+    icon: Briefcase,
+    image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=800',
+    fullDescription: 'Your bridge to the industry. We provide the tools, reviews, and connections necessary to land top-tier internships and full-time roles at leading technology companies.',
+    calendarSummary: 'October 2024',
+    calendarSubtitle: 'Recruitment Season',
+    featuredEvents: [
+      {
+        id: 'pd-1',
+        day: '18',
+        month: 'Oct',
+        tag: 'Seminar',
+        tagColor: 'cyan',
+        title: 'Big Tech Resume Review',
+        desc: '1-on-1 resume tear-downs with engineers from Google and Microsoft.',
+        time: '01:00 PM - 05:00 PM',
+        location: 'Career Center'
+      }
+    ],
+    archives: [
+      {
+        id: 'pd-a1',
+        date: 'April 10, 2024',
+        title: 'Mock Interview Marathon',
+        desc: 'Students practiced behavioral and technical interviews with alumni.',
+        badge: 'Photos',
+        badgeColor: 'cyan',
+        img: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=800'
+      },
+      {
+        id: 'pd-a2',
+        date: 'February 15, 2024',
+        title: 'Salary Negotiation 101',
+        desc: 'Learn how to advocate for your worth in your first job.',
+        badge: 'Recording',
+        badgeColor: 'indigo',
+        img: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80&w=800'
+      },
+      {
+        id: 'pd-a3',
+        date: 'November 05, 2023',
+        title: 'LinkedIn Profile Makeover',
+        desc: 'Step-by-step guide to building a recruiter-ready profile.',
+        badge: 'Slides',
+        badgeColor: 'blue',
+        img: 'https://images.unsplash.com/photo-1516116216624-53e697fedbea?auto=format&fit=crop&q=80&w=800'
+      }
+    ]
+  },
+  {
+    id: 'entrepreneurship-clubs',
+    title: 'Entrepreneurship & Clubs',
+    badge: 'INNOVATION',
+    description: 'Incubating startup ideas, practicing business strategy, and learning how to build and launch successful products.',
+    linkText: 'Join the Hub',
+    icon: Rocket,
+    image: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=80&w=800',
+    fullDescription: 'For the builders and visionaries. Transform your side projects into viable startups through pitch competitions, mentorship, and seed funding insights.',
+    calendarSummary: 'December 2024',
+    calendarSubtitle: 'Pitch Quarter',
+    featuredEvents: [
+      {
+        id: 'ent-1',
+        day: '01',
+        month: 'Dec',
+        tag: 'Competition',
+        tagColor: 'cyan',
+        title: 'Winter Pitch Fest',
+        desc: 'Pitch your MVP to a panel of local angel investors.',
+        time: '05:00 PM - 08:00 PM',
+        location: 'Innovation Hub'
+      }
+    ],
+    archives: [
+      {
+        id: 'ent-a1',
+        date: 'October 12, 2023',
+        title: 'Fall Pitch Fest',
+        desc: 'Students pitched their MVP to local angel investors.',
+        badge: 'Recording',
+        badgeColor: 'orange',
+        img: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=80&w=800'
+      },
+      {
+        id: 'ent-a2',
+        date: 'September 01, 2023',
+        title: 'Startup Ideation Workshop',
+        desc: 'Brainstorming frameworks to discover viable business ideas.',
+        badge: 'Slides',
+        badgeColor: 'cyan',
+        img: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=800'
       }
     ]
   }
