@@ -61,20 +61,22 @@ const Home = () => {
       {/* ── HERO ───────────────────────────────────────── */}
       <section id="home" className="w-full h-[600px] sm:h-[800px] relative bg-black overflow-hidden font-sans border-b border-white/10">
         <SonicWaveformHero>
-          <div className="flex flex-col items-center justify-start w-full h-full text-center px-4 pt-16 md:pt-24 relative z-10 pointer-events-none">
-            
-            {/* Badge */}
-            <motion.span
+          <div className="flex flex-col items-center justify-start w-full h-full text-center px-8 md:px-16 pt-16 md:pt-24 relative z-10 pointer-events-none">
+
+            {/* Pre-title / Institution Name */}
+            <motion.div
               custom={0} variants={fadeUpVariants} initial="hidden" animate="visible"
-              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-white/80 text-sm font-semibold tracking-widest uppercase mb-6 backdrop-blur-sm"
+              className="text-2xl md:text-3xl lg:text-4xl leading-none mb-6 font-bold tracking-tight drop-shadow-2xl uppercase -mt-8 md:-mt-12"
+              style={{ color: '#ffffff', WebkitTextFillColor: 'unset' }}
             >
-              CSE Association
-            </motion.span>
+              HINDUSTHAN INSTITUTE OF TECHNOLOGY
+            </motion.div>
 
             {/* Title */}
             <motion.h1
               custom={1} variants={fadeUpVariants} initial="hidden" animate="visible"
-              className="text-5xl md:text-7xl lg:text-[100px] leading-none mb-6 font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-400 drop-shadow-2xl"
+              className="text-5xl md:text-7xl lg:text-[100px] leading-none mb-6 font-serif italic font-extrabold tracking-tight drop-shadow-2xl"
+              style={{ color: '#ffffff', WebkitTextFillColor: 'unset' }}
             >
               Empowering<br />CSE Innovators.
             </motion.h1>
@@ -82,7 +84,8 @@ const Home = () => {
             {/* Subtitle */}
             <motion.p
               custom={2} variants={fadeUpVariants} initial="hidden" animate="visible"
-              className="max-w-2xl mx-auto text-lg md:text-xl text-gray-400 mb-10 font-medium"
+              className="max-w-2xl mx-auto text-lg md:text-xl mb-16 font-medium drop-shadow-md"
+              style={{ color: 'rgba(255,255,255,0.85)' }}
             >
               A community of passionate Computer Science students dedicated to learning, leadership, and launching the future of tech.
             </motion.p>
@@ -90,17 +93,17 @@ const Home = () => {
             {/* CTAs */}
             <motion.div
               custom={3} variants={fadeUpVariants} initial="hidden" animate="visible"
-              className="flex flex-col sm:flex-row gap-4 pointer-events-auto"
+              className="flex flex-col sm:flex-row gap-4 pointer-events-auto mt-4"
             >
-              <button 
+              <button
                 onClick={() => scrollTo('leadership')}
-                className="px-8 py-4 font-bold transition-transform hover:scale-105 active:scale-95 bg-white text-black rounded-full shadow-[0_0_20px_rgba(255,255,255,0.2)] flex items-center justify-center gap-2"
+                className="px-6 py-2.5 text-sm md:text-base font-bold transition-transform hover:scale-105 active:scale-95 bg-white text-black rounded-full shadow-[0_0_20px_rgba(255,255,255,0.2)] flex items-center justify-center gap-2"
               >
                 Meet the Team <ArrowRight size={18} />
               </button>
-              <button 
+              <button
                 onClick={(e) => { e.preventDefault(); scrollTo('clubs'); }}
-                className="px-8 py-4 font-bold transition-transform hover:scale-105 active:scale-95 bg-transparent text-white border border-white/20 rounded-full hover:bg-white/10 flex items-center justify-center"
+                className="px-6 py-2.5 text-sm md:text-base font-bold transition-transform hover:scale-105 active:scale-95 bg-transparent text-white border border-white/20 rounded-full hover:bg-white/10 flex items-center justify-center"
               >
                 Explore Clubs
               </button>
